@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>たかふみの冒険</title>
+	<link rel="manifest" href="/manifest.json">
+	if('serviceWorker' in navigator){
+		navigator.serviceWorker.register('/serviceworker.js').then(function(){
+			console.log("Service Worker is registered!!");
+		});
+	}
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		canvas {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<script src="js/engine/kuroneko.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
